@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from 'react';
 const BRAND_NAME = "Shine Raza Fragrance";
 const BRAND_FULL = "Shine Raza Fragrance Manufacturing";
 const ADDRESS = "Gala No. D-62, B Bldg, Paradia Complex, Bhayandar West, Thane, 401105";
+const OFFICE_ADDRESS = "Office No. 130, 1st Floor Rassaz Mall, Naya Nagar, Mira Road (E), Thane - 401107";
 const EMAIL = "shinerazafragrance@gmail.com";
 const PHONE = "9987518102";
 const WHATSAPP = "9987518102";
@@ -23,7 +24,7 @@ export const Navbar = () => {
           <Phone size={10} className="md:hidden" /> +91 {PHONE}
         </a>
         <div className="hidden lg:flex gap-6 items-center">
-          <span>{ADDRESS}</span>
+          <span>{OFFICE_ADDRESS}</span>
         </div>
         <a href={`mailto:${EMAIL}`} className="hover:opacity-80 transition-opacity lowercase truncate ml-2">
           {EMAIL}
@@ -294,7 +295,7 @@ export const ProductSection = () => {
   const products = [
     { name: "Fragrances", desc: "Creator of Aroma Ingredients & Premium Blends.", image: "/fragrance.jpg" },
     { name: "Personal Care", desc: "We take a look at where the opportunities and challenges are.", image: "/personal-care.jpg" },
-    { name: "Bakhoor", desc: "Traditional middle eastern incense & home fragrances.", image: "/bakhoor.jpg" },
+    { name: "Detergent", desc: "Traditional middle eastern incense & home fragrances.", image: "/detergent.png" },
     { name: "Soap", desc: "We specialize in providing fragrances for artisan soaps.", image: "/soap-oil.png" },
     { name: "Essential Oil", desc: "Elevate your daily routine with herbal essences.", image: "/essential-oil.jpg" },
     { name: "Attar", desc: "Natural perfume oils crafted through traditional methods.", image: "/attar.jpg" },
