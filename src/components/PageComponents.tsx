@@ -293,18 +293,18 @@ export const OurWork = () => {
 
 export const ProductSection = () => {
   const products = [
-    { name: "Fragrances", desc: "Creator of Aroma Ingredients & Premium Blends.", image: "/fragrance.jpg" },
-    { name: "Personal Care", desc: "We take a look at where the opportunities and challenges are.", image: "/personal-care.jpg" },
-    { name: "Detergent", desc: "Traditional middle eastern incense & home fragrances.", image: "/detergent.png" },
-    { name: "Soap", desc: "We specialize in providing fragrances for artisan soaps.", image: "/soap-oil.png" },
-    { name: "Essential Oil", desc: "Elevate your daily routine with herbal essences.", image: "/essential-oil.jpg" },
-    { name: "Attar", desc: "Natural perfume oils crafted through traditional methods.", image: "/attar.jpg" },
-    { name: "Cream & Cosmetics", desc: "Skin-friendly aroma ingredients for beauty brands.", image: "/cream.jpg" },
-    { name: "Agarbatti", desc: "Gentle and safe fragrances for sensitive skin.", image: "/agarbatti.jpg" },
-    { name: "Air Fragrances", desc: "Innovative profiles reflecting unique spaces.", image: "/air-fragrance.jpg" },
-    { name: "Perfumes", desc: "Concentrated luxury perfumes from nature's heart.", image: "/perfume.jpg" },
-    { name: "Hair Care", desc: "Signature scents for professional hair care lines.", image: "/oil.jpg" },
-    { name: "Aromatherapy", desc: "Holistic wellness through therapeutic scents.", image: "/aromatherapy.jpg" }
+    { name: "Fragrances", desc: "Creator of Aroma Ingredients & Premium Blends.", image: "public/fragrance.jpg" },
+    { name: "Personal Care", desc: "We take a look at where the opportunities and challenges are.", image: "public/personal-care.jpg" },
+    { name: "Detergent", desc: "Traditional middle eastern incense & home fragrances.", image: "public/detergent.png" },
+    { name: "Soap", desc: "We specialize in providing fragrances for artisan soaps.", image: "public/soap-oil.png" },
+    { name: "Essential Oil", desc: "Elevate your daily routine with herbal essences.", image: "public/essential-oil.jpg" },
+    { name: "Attar", desc: "Natural perfume oils crafted through traditional methods.", image: "public/attar.jpg" },
+    { name: "Cream & Cosmetics", desc: "Skin-friendly aroma ingredients for beauty brands.", image: "public/cream.jpg" },
+    { name: "Agarbatti", desc: "Gentle and safe fragrances for sensitive skin.", image: "public/agarbatti.jpg" },
+    { name: "Air Fragrances", desc: "Innovative profiles reflecting unique spaces.", image: "public/air-fragrance.jpg" },
+    { name: "Perfumes", desc: "Concentrated luxury perfumes from nature's heart.", image: "public/perfume.jpg" },
+    { name: "Hair Care", desc: "Signature scents for professional hair care lines.", image: "public/oil.jpg" },
+    { name: "Aromatherapy", desc: "Holistic wellness through therapeutic scents.", image: "public/aromatherapy.jpg" }
   ];
 
   return (
@@ -474,7 +474,7 @@ export const AboutUs = () => {
           </p>
           <div className="bg-brand-bg p-4 md:p-8 border editorial-border relative group">
             <p className="relative z-10 font-bold leading-normal">
-              Established in 2008 by Mr. Shoeb with a vision of becoming an innovative pioneer in manufacturing cold pressed orange oil in an eco friendly way. Under his dynamic leadership the organization started developing fragrance for domestic market & became a leading Indian Company. 
+              Established in 2008 with a vision of becoming an innovative pioneer in manufacturing cold pressed orange oil in an eco friendly way. Under his dynamic leadership the organization started developing fragrance for domestic market & became a leading Indian Company. 
             </p>
             <div className="absolute top-1 right-2 font-display italic text-2xl md:text-4xl text-brand-red/5 group-hover:text-brand-red/10 transition-all font-black select-none pointer-events-none uppercase">Heritage</div>
           </div>
