@@ -2,6 +2,25 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Phone, Mail, MapPin, MessageCircle, ChevronRight, Globe, Play, Pause, Volume2, VolumeX, Send, Instagram, Facebook, Twitter, Linkedin, ShoppingCart, Menu, X, PhoneCall } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 
+import fragrance from "../assets/fragrance.jpg";
+import personal from "../assets/personal-care.jpg";
+import detergent from "../assets/detergent.png";
+import soap from "../assets/soap-oil.png";
+import essential from "../assets/essential-oil.jpg";
+import attar from "../assets/attar.jpg";
+import cream from "../assets/cream.jpg";
+import agarbatti from "../assets/agarbatti.jpg";
+import air from "../assets/air-fragrance.jpg";
+import perfume from "../assets/fragrance.jpg"; // or correct perfume image if different
+import hair from "../assets/hair-care.jpg";
+import aroma from "../assets/aromatherapy.jpg";
+import hero1 from '../assets/hero-img-1.png';
+import hero2 from '../assets/hero-img-2.png';
+import hero3 from '../assets/hero-img-3.png';
+import logo from '../assets/logo.png';
+import yourBrand from '../assets/your-brand.png';
+
+
 const BRAND_NAME = "Shine Raza Fragrance";
 const BRAND_FULL = "Shine Raza Fragrance Manufacturing";
 const ADDRESS = "Gala No. D-62, B Bldg, Paradia Complex, Bhayandar West, Thane, 401105";
@@ -46,7 +65,7 @@ export const Navbar = () => {
           {/* Brand Center (Mobile) / Left (Desktop) */}
           <div className="flex items-center gap-2 md:gap-6 lg:static absolute left-1/2 -translate-x-1/2 lg:translate-x-0 pointer-events-none lg:pointer-events-auto">
             <motion.img 
-              src="/logo.png" 
+              src={logo}
               alt="Shine Raza Logo" 
               className="h-9 md:h-14 w-auto object-contain" 
               animate={{
@@ -148,19 +167,19 @@ export const Hero = () => {
     {
       title: "Nature's Purest Essence",
       subtitle: "Experience Fragrances Inspired by the Wilderness",
-      image: "/hero-img-1.png",
+      image: hero1,
       cta: "Explore Our Fragrance"
     },
     {
       title: "Global Partnership Excellence",
       subtitle: "Your Trusted Partner in Private Labeling",
-      image: "/hero-img-2.png",
+      image: hero2,
       cta: "Become a Partner"
     },
     {
       title: "Innovation in Every Fragrances",
       subtitle: "Personal Care Crafted with Precision",
-      image: "/hero-img-3.png",
+      image: hero3,
       cta: "View Our Products"
     }
   ];
@@ -293,18 +312,18 @@ export const OurWork = () => {
 
 export const ProductSection = () => {
   const products = [
-    { name: "Fragrances", desc: "Creator of Aroma Ingredients & Premium Blends.", image: "/fragrance.jpg" },
-    { name: "Personal Care", desc: "We take a look at where the opportunities and challenges are.", image: "/personal-care.jpg" },
-    { name: "Detergent", desc: "Traditional middle eastern incense & home fragrances.", image: "/detergent.png" },
-    { name: "Soap", desc: "We specialize in providing fragrances for artisan soaps.", image: "/soap-oil.png" },
-    { name: "Essential Oil", desc: "Elevate your daily routine with herbal essences.", image: "/essential-oil.jpg" },
-    { name: "Attar", desc: "Natural perfume oils crafted through traditional methods.", image: "/attar.jpg" },
-    { name: "Cream & Cosmetics", desc: "Skin-friendly aroma ingredients for beauty brands.", image: "/cream.jpg" },
-    { name: "Agarbatti", desc: "Gentle and safe fragrances for sensitive skin.", image: "/agarbatti.jpg" },
-    { name: "Air Fragrances", desc: "Innovative profiles reflecting unique spaces.", image: "/air-fragrance.jpg" },
-    { name: "Perfumes", desc: "Concentrated luxury perfumes from nature's heart.", image: "/perfume.jpg" },
-    { name: "Hair Care", desc: "Signature scents for professional hair care lines.", image: "/oil.jpg" },
-    { name: "Aromatherapy", desc: "Holistic wellness through therapeutic scents.", image: "/aromatherapy.jpg" }
+    { name: "Fragrances", desc: "Creator of Aroma Ingredients & Premium Blends.", image: fragrance },
+    { name: "Personal Care", desc: "We take a look at where the opportunities and challenges are.", image: personal },
+    { name: "Detergent", desc: "Traditional middle eastern incense & home fragrances.", image: detergent },
+    { name: "Soap", desc: "We specialize in providing fragrances for artisan soaps.", image: soap },
+    { name: "Essential Oil", desc: "Elevate your daily routine with herbal essences.", image: essential},
+    { name: "Attar", desc: "Natural perfume oils crafted through traditional methods.", image: attar },
+    { name: "Cream & Cosmetics", desc: "Skin-friendly aroma ingredients for beauty brands.", image: cream },
+    { name: "Agarbatti", desc: "Gentle and safe fragrances for sensitive skin.", image: agarbatti },
+    { name: "Air Fragrances", desc: "Innovative profiles reflecting unique spaces.", image: air },
+    { name: "Perfumes", desc: "Concentrated luxury perfumes from nature's heart.", image: perfume },
+    { name: "Hair Care", desc: "Signature scents for professional hair care lines.", image: hair },
+    { name: "Aromatherapy", desc: "Holistic wellness through therapeutic scents.", image: aroma}
   ];
 
   return (
@@ -377,7 +396,7 @@ export const BrandSection = () => {
           {/* Image: Mobile Priority 2 */}
           <div className="flex items-center justify-center order-2 lg:order-1">
             <div className="aspect-[3/4] w-full max-w-[280px] md:max-w-sm bg-zinc-100 border-4 border-zinc-50 shadow-2xl relative group overflow-hidden">
-               <img src="/your-brand.png" alt="Your Brand" className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000 grayscale" />
+               <img src={yourBrand} alt="Your Brand" className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000 grayscale" />
                <div className="absolute inset-0 bg-brand-red/5 mix-blend-multiply" />
             </div>
           </div>
