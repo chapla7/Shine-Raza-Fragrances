@@ -293,18 +293,18 @@ export const OurWork = () => {
 
 export const ProductSection = () => {
   const products = [
-    { name: "Fragrances", desc: "Creator of Aroma Ingredients & Premium Blends.", image: "../assets/fragrance.jpg" },
-    { name: "Personal Care", desc: "We take a look at where the opportunities and challenges are.", image: "../assets/personal-care.jpg" },
-    { name: "Detergent", desc: "Traditional middle eastern incense & home fragrances.", image: "../assets/detergent.png" },
-    { name: "Soap", desc: "We specialize in providing fragrances for artisan soaps.", image: "../assets/soap-oil.png" },
-    { name: "Essential Oil", desc: "Elevate your daily routine with herbal essences.", image: "../assets/essential-oil.jpg" },
-    { name: "Attar", desc: "Natural perfume oils crafted through traditional methods.", image: "../assets/attar.jpg" },
-    { name: "Cream & Cosmetics", desc: "Skin-friendly aroma ingredients for beauty brands.", image: "../assets/cream.jpg" },
-    { name: "Agarbatti", desc: "Gentle and safe fragrances for sensitive skin.", image: "../assets/agarbatti.jpg" },
-    { name: "Air Fragrances", desc: "Innovative profiles reflecting unique spaces.", image: "../assets/air-fragrance.jpg" },
-    { name: "Perfumes", desc: "Concentrated luxury perfumes from nature's heart.", image: "../assets/perfume.jpg" },
-    { name: "Hair Care", desc: "Signature scents for professional hair care lines.", image: "../assets/oil.jpg" },
-    { name: "Aromatherapy", desc: "Holistic wellness through therapeutic scents.", image: "../assets/aromatherapy.jpg" }
+    { name: "Fragrances", desc: "Creator of Aroma Ingredients & Premium Blends.", image: "/fragrance.jpg" },
+    { name: "Personal Care", desc: "We take a look at where the opportunities and challenges are.", image: "/personal-care.jpg" },
+    { name: "Detergent", desc: "Traditional middle eastern incense & home fragrances.", image: "/detergent.png" },
+    { name: "Soap", desc: "We specialize in providing fragrances for artisan soaps.", image: "/soap-oil.png" },
+    { name: "Essential Oil", desc: "Elevate your daily routine with herbal essences.", image: "/essential-oil.jpg" },
+    { name: "Attar", desc: "Natural perfume oils crafted through traditional methods.", image: "/attar.jpg" },
+    { name: "Cream & Cosmetics", desc: "Skin-friendly aroma ingredients for beauty brands.", image: "/cream.jpg" },
+    { name: "Agarbatti", desc: "Gentle and safe fragrances for sensitive skin.", image: "/agarbatti.jpg" },
+    { name: "Air Fragrances", desc: "Innovative profiles reflecting unique spaces.", image: "/air-fragrance.jpg" },
+    { name: "Perfumes", desc: "Concentrated luxury perfumes from nature's heart.", image: "/perfume.jpg" },
+    { name: "Hair Care", desc: "Signature scents for professional hair care lines.", image: "/oil.jpg" },
+    { name: "Aromatherapy", desc: "Holistic wellness through therapeutic scents.", image: "/aromatherapy.jpg" }
   ];
 
   return (
