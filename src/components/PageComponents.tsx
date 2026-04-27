@@ -44,15 +44,24 @@ export const Navbar = () => {
           </button>
 
           {/* Brand Center (Mobile) / Left (Desktop) */}
-          <div className="flex items-center gap-2 md:gap-4 lg:static absolute left-1/2 -translate-x-1/2 lg:translate-x-0 pointer-events-none lg:pointer-events-auto">
-            <img 
+          <div className="flex items-center gap-2 md:gap-6 lg:static absolute left-1/2 -translate-x-1/2 lg:translate-x-0 pointer-events-none lg:pointer-events-auto">
+            <motion.img 
               src="/logo.png" 
               alt="Shine Raza Logo" 
-              className="h-10 md:h-12 w-auto object-contain" 
+              className="h-9 md:h-14 w-auto object-contain" 
+              animate={{
+                scale: [1, 1.15, 1.05, 1.25, 1],
+              }}
+              transition={{
+                duration: 1.2,
+                repeat: Infinity,
+                times: [0, 0.1, 0.2, 0.4, 1],
+                ease: "easeInOut"
+              }}
             />
-            <div className="flex flex-col text-left">
-              <span className="font-display font-black text-xl md:text-2xl leading-none tracking-tight text-[#1a1a1a] lowercase">shineraza</span>
-              <span className="text-[6px] md:text-[8px] font-mono font-black tracking-[0.2em] text-zinc-400 uppercase">fragrance</span>
+            <div className="flex flex-col text-center lg:text-left">
+              <span className="font-display font-black text-lg md:text-3xl leading-none tracking-tighter text-[#1a1a1a]">SHINE RAZA</span>
+              <span className="text-[7px] md:text-xs font-mono font-black tracking-[0.4em] text-zinc-400 md:mt-1 uppercase">FRAGRANCE</span>
             </div>
           </div>
 
@@ -217,14 +226,6 @@ export const Hero = () => {
               transition={{ delay: 0.3, duration: 0.8 }}
               className="max-w-4xl flex flex-col items-center"
             >
-               <motion.img 
-                 src="/logo.png" 
-                 alt="Logo" 
-                 className="w-16 h-16 md:w-24 md:h-24 mb-6 md:mb-8 object-contain filter invert brightness-0"
-                 initial={{ scale: 0.8, opacity: 0 }}
-                 animate={{ scale: 1, opacity: 1 }}
-                 transition={{ delay: 0.5, duration: 1 }}
-               />
                <span className="text-white text-[10px] font-mono font-bold uppercase tracking-[0.5em] mb-4 block">
                  {slides[currentSlide].subtitle}
                </span>
