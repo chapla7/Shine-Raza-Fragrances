@@ -41,7 +41,7 @@ export const Navbar = () => {
             onClick={() => setIsMenuOpen(true)}
             className="lg:hidden p-2 text-[#1a1a1a] flex-none"
           >
-            <Menu size={24} />
+            <Menu size={32} />
           </button>
 
           {/* Brand Center (Mobile) / Left (Desktop) */}
@@ -61,8 +61,8 @@ export const Navbar = () => {
               }}
             />
             <div className="flex flex-col text-center lg:text-left">
-              <span className="font-display font-black text-lg md:text-3xl leading-none tracking-tighter text-[#1a1a1a]">SHINE RAZA</span>
-              <span className="text-[7px] md:text-xs font-mono font-black tracking-[0.4em] text-zinc-400 md:mt-1 uppercase">FRAGRANCE</span>
+              <span className="font-display font-black text-2xl md:text-3xl leading-none tracking-tighter text-[#1a1a1a]">SHINE RAZA</span>
+              <span className="text-[10px] md:text-xs font-mono font-black tracking-[0.4em] text-zinc-400 md:mt-1 uppercase">FRAGRANCE</span>
             </div>
           </div>
 
@@ -92,7 +92,7 @@ export const Navbar = () => {
               href={`tel:${PHONE}`}
               className="lg:hidden p-1.5 text-[#1a1a1a] hover:text-brand-red transition-colors active:scale-90"
             >
-              <PhoneCall size={18} />
+              <PhoneCall size={26} />
             </a>
             <a 
               href={`https://wa.me/${WHATSAPP}?text=Hi, I would like to contact you.`}
@@ -124,12 +124,12 @@ export const Navbar = () => {
               className="fixed top-0 left-0 right-0 w-full h-[25vh] bg-[#eeeeee] z-[120] p-6 shadow-2xl lg:hidden flex flex-col"
             >
               <div className="flex justify-between items-center mb-6">
-                <span className="font-display font-black text-xl tracking-tighter uppercase text-[#1a1a1a]">Menu</span>
+                <span className="font-display font-black text-2xl tracking-tighter uppercase text-[#1a1a1a]">Menu</span>
                 <button onClick={() => setIsMenuOpen(false)} className="text-[#1a1a1a]">
-                  <X size={20} />
+                  <X size={28} />
                 </button>
               </div>
-              <div className="flex justify-around items-center h-full text-[10px] font-display font-bold uppercase tracking-tighter text-[#1a1a1a]">
+              <div className="flex justify-around items-center h-full text-xs font-display font-bold uppercase tracking-tighter text-[#1a1a1a]">
                 <a href="#" onClick={() => setIsMenuOpen(false)}>Home</a>
                 <a href="#products" onClick={() => setIsMenuOpen(false)}>Product</a>
                 <a href="#brands" onClick={() => setIsMenuOpen(false)}>Brand</a>
@@ -269,15 +269,20 @@ export const OurWork = () => {
         Work Legacy
       </div>
       
-      <div className="max-w-7xl mx-auto grid grid-cols-3 md:grid-cols-5 relative z-10 w-full">
+      <div className="max-w-7xl mx-auto flex flex-wrap justify-center items-stretch relative z-10 w-full">
         {stats.map((stat, i) => (
           <motion.div 
             key={i}
             whileHover={{ y: -5 }}
-            className={`flex flex-col items-center text-center p-4 md:p-12 group transition-all border-zinc-100 ${i % 3 !== 2 ? 'border-r' : ''} md:border-r editorial-border last:border-r-0 ${i > 2 ? 'mt-4 md:mt-0' : ''}`}
+            className={`flex flex-col items-center text-center p-4 md:p-10 group transition-all border-zinc-100 w-1/3 md:w-1/5 editorial-border last:border-r-0`}
           >
-            <div className="relative mb-4 md:mb-8 w-12 h-12 md:w-24 md:h-24 flex items-center justify-center border-2 border-[#1a1a1a] rounded-full group-hover:bg-[#1a1a1a] transition-all shrink-0">
-              <div className="text-xs md:text-2xl font-display font-black text-[#1a1a1a] group-hover:text-white transition-colors">
+            <div className="relative mb-4 md:mb-8 w-16 h-16 md:w-32 md:h-32 flex items-center justify-center shrink-0">
+              <img 
+                src="https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777366350/pngtree-red-flower-circle-border-png-image_4562509-removebg-preview_clpcwh.png" 
+                alt="border"
+                className="absolute inset-0 w-full h-full object-contain group-hover:rotate-12 transition-transform duration-700"
+              />
+              <div className="relative z-10 text-xs md:text-2xl font-display font-black text-[#1a1a1a] group-hover:scale-110 transition-transform">
                 {stat.value}
               </div>
             </div>
@@ -463,7 +468,7 @@ export const ReviewSection = () => {
 export const AboutUs = () => {
   return (
     <section id="about" className="h-[90vh] md:min-h-screen py-12 md:py-16 px-4 md:px-12 bg-white flex items-center justify-center overflow-hidden">
-      <div className="max-w-4xl mx-auto text-center space-y-4 md:space-y-8">
+      <div className="max-w-6xl mx-auto text-center space-y-4 md:space-y-8">
         <div className="space-y-1 md:space-y-2">
           <h2 className="font-display font-black text-4xl md:text-8xl tracking-tighter uppercase leading-none">Perspective</h2>
           <div className="text-[8px] md:text-[10px] font-mono font-bold uppercase tracking-[0.5em] text-zinc-400 block">Legacy since 2008</div>
@@ -490,12 +495,12 @@ export const AboutUs = () => {
 
 export const LocationSection = () => {
   return (
-    <section className="h-[80vh] md:py-24 bg-[#1a1a1a] md:relative overflow-hidden text-white flex items-center">
+    <section className="py-12 md:py-32 bg-[#1a1a1a] md:relative overflow-hidden text-white flex items-center">
       <div className="max-w-7xl mx-auto px-4 md:px-12 flex flex-col lg:flex-row items-center gap-6 md:gap-16 w-full">
         <div className="w-full lg:w-[60%] aspect-video border-4 md:border-8 border-white/5 relative group shrink-0">
           <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.6565!2d72.8465!3d19.29!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b065a0000001%3A0x0!2zMTnCsDE3JzI0LjAiTiA3MsKwNTAnNDcuNCJF!5e0!3m2!1sen!2sin!4v1713961531000!5m2!1sen!2sin" 
-            className="w-full h-full grayscale invert opacity-50 group-hover:opacity-100 group-hover:grayscale-0 group-hover:invert-0 transition-all duration-1000"
+            className="w-full h-full opacity-100"
             allowFullScreen={false} 
             loading="lazy" 
           />
@@ -512,6 +517,13 @@ export const LocationSection = () => {
                 <br />
                 <span className="text-zinc-500 text-[8px] md:text-xs font-mono mt-1 md:mt-2 block">Thane District, Maharashtra, India</span>
               </p>
+            </div>
+
+            <div className="space-y-1 md:space-y-3">
+              <h4 className="text-[8px] md:text-[10px] font-mono font-bold uppercase tracking-widest text-zinc-500">Contact Number</h4>
+              <a href={`tel:${PHONE}`} className="font-display font-bold text-sm md:text-2xl text-white hover:text-brand-red transition-colors block">
+                +91 {PHONE}
+              </a>
             </div>
           </div>
         </div>
