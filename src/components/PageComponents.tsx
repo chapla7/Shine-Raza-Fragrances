@@ -47,7 +47,7 @@ export const Navbar = () => {
           {/* Brand Center (Mobile) / Left (Desktop) */}
           <div className="flex items-center gap-2 md:gap-6 lg:static absolute left-1/2 -translate-x-1/2 lg:translate-x-0 pointer-events-none lg:pointer-events-auto">
             <motion.img 
-              src="/logo.png"
+              src="https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777363138/logo_s65do6.png"
               alt="Logo" 
               className="h-9 md:h-14 w-auto object-contain" 
               animate={{
@@ -297,7 +297,7 @@ export const ProductSection = () => {
     { name: "Fragrances", desc: "Creator of Aroma Ingredients & Premium Blends.", image: "/fragrance.jpg" },
     { name: "Personal Care", desc: "We take a look at where the opportunities and challenges are.", image: "/personal-care.jpg" },
     { name: "Detergent", desc: "Traditional middle eastern incense & home fragrances.", image: "/detergent.png" },
-    { name: "Soap", desc: "We specialize in providing fragrances for artisan soaps.", image: "/soap.jpg" },
+    { name: "Soap", desc: "We specialize in providing fragrances for artisan soaps.", image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777363140/soap-oil_fguvlz.png" },
     { name: "Essential Oil", desc: "Elevate your daily routine with herbal essences.", image: "/essential-oil.jpg"},
     { name: "Attar", desc: "Natural perfume oils crafted through traditional methods.", image: "/attar.jpg" },
     { name: "Cream & Cosmetics", desc: "Skin-friendly aroma ingredients for beauty brands.", image: "/cream.jpg" },
