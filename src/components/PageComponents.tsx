@@ -149,19 +149,19 @@ export const Hero = () => {
     {
       title: "Nature's Purest Essence",
       subtitle: "Experience Fragrances Inspired by the Wilderness",
-      image: "/hero-img-1.png",
+      image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777363139/hero-img-1_hze5cj.png",
       cta: "Explore Our Fragrance"
     },
     {
       title: "Global Partnership Excellence",
       subtitle: "Your Trusted Partner in Private Labeling",
-      image: "/hero-img-2.png",
+      image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777363139/hero-img-2_rbxb6t.png",
       cta: "Become a Partner"
     },
     {
       title: "Innovation in Every Fragrances",
       subtitle: "Personal Care Crafted with Precision",
-      image: "/hero-img-3.png",
+      image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777363140/hero-img-3_bghco6.png",
       cta: "View Our Products"
     }
   ];
@@ -294,18 +294,18 @@ export const OurWork = () => {
 
 export const ProductSection = () => {
   const products = [
-    { name: "Fragrances", desc: "Creator of Aroma Ingredients & Premium Blends.", image: "/fragrance.jpg" },
-    { name: "Personal Care", desc: "We take a look at where the opportunities and challenges are.", image: "/personal-care.jpg" },
-    { name: "Detergent", desc: "Traditional middle eastern incense & home fragrances.", image: "/detergent.png" },
+    { name: "Fragrances", desc: "Creator of Aroma Ingredients & Premium Blends.", image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777363137/fragrance_rgkj87.jpg" },
+    { name: "Personal Care", desc: "We take a look at where the opportunities and challenges are.", image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777363138/personal-care_ytwfy9.jpg" },
+    { name: "Detergent", desc: "Traditional middle eastern incense & home fragrances.", image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777364224/detergent_mahog5.png" },
     { name: "Soap", desc: "We specialize in providing fragrances for artisan soaps.", image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777363140/soap-oil_fguvlz.png" },
-    { name: "Essential Oil", desc: "Elevate your daily routine with herbal essences.", image: "/essential-oil.jpg"},
-    { name: "Attar", desc: "Natural perfume oils crafted through traditional methods.", image: "/attar.jpg" },
-    { name: "Cream & Cosmetics", desc: "Skin-friendly aroma ingredients for beauty brands.", image: "/cream.jpg" },
-    { name: "Agarbatti", desc: "Gentle and safe fragrances for sensitive skin.", image: "/agarbatti.jpg" },
-    { name: "Air Fragrances", desc: "Innovative profiles reflecting unique spaces.", image: "/air.jpg" },
-    { name: "Perfumes", desc: "Concentrated luxury perfumes from nature's heart.", image: "/perfume.jpg" },
-    { name: "Hair Care", desc: "Signature scents for professional hair care lines.", image: "/hair-care.jpg" },
-    { name: "Aromatherapy", desc: "Holistic wellness through therapeutic scents.", image: "/aromatherapy.jpg"}
+    { name: "Essential Oil", desc: "Elevate your daily routine with herbal essences.", image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777363137/essential-oil_iytlgz.jpg"},
+    { name: "Attar", desc: "Natural perfume oils crafted through traditional methods.", image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777363136/attar_m0twak.jpg" },
+    { name: "Cream & Cosmetics", desc: "Skin-friendly aroma ingredients for beauty brands.", image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777363137/cream_eglexi.jpg" },
+    { name: "Agarbatti", desc: "Gentle and safe fragrances for sensitive skin.", image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777363136/agarbatti_a4ld4i.jpg" },
+    { name: "Air Fragrances", desc: "Innovative profiles reflecting unique spaces.", image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777363136/air-fragrance_iflegk.jpg" },
+    { name: "Perfumes", desc: "Concentrated luxury perfumes from nature's heart.", image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777364371/perfume_fxgxoa.jpg" },
+    { name: "Hair Care", desc: "Signature scents for professional hair care lines.", image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777363139/oil_r9bps9.jpg" },
+    { name: "Aromatherapy", desc: "Holistic wellness through therapeutic scents.", image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777363136/aromatherapy_sqm8jn.jpg"}
   ];
 
   return (
@@ -378,7 +378,7 @@ export const BrandSection = () => {
           {/* Image: Mobile Priority 2 */}
           <div className="flex items-center justify-center order-2 lg:order-1">
             <div className="aspect-[3/4] w-full max-w-[280px] md:max-w-sm bg-zinc-100 border-4 border-zinc-50 shadow-2xl relative group overflow-hidden">
-               <img src="/your-brand.png" alt="Your Brand" className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000 grayscale" />
+               <img src="https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777363139/your-brand_eivhr2.png" alt="Your Brand" className="w-full h-full object-cover group-hover:scale-105 transition-all duration-1000 grayscale" />
                <div className="absolute inset-0 bg-brand-red/5 mix-blend-multiply" />
             </div>
           </div>
