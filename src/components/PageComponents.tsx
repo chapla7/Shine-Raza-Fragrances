@@ -358,21 +358,37 @@ export const ProductSection = () => {
 };
 
 export const RetailerProductSection = () => {
-  const [cards, setCards] = useState([
+  const initialCards = [
     { id: 1, name: "Zumar", desc: "Premium Intense Fragrance", image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777459478/Zumar_np7l4i.png" },
-    { id: 2, name: "Cara", desc: "Elegant Floral Collection", image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777459478/Cara_re5ecv.png" }
-  ]);
+    { id: 2, name: "Cara", desc: "Elegant Floral Collection", image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777459478/Cara_re5ecv.png" },
+    { id: 3, name: "Legacy Edition", desc: "Crafted for Professional Journeys", image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777460175/Yellow_Dark_Professional_Journey_Movie_Poster_fpjtcu.jpg" }
+  ];
+
+  const [cards, setCards] = useState(initialCards);
 
   const removeCard = (id: number) => {
     setCards((prev) => {
       const filtered = prev.filter(c => c.id !== id);
-      if (filtered.length === 0) return [
-        { id: 1, name: "Zumar", desc: "Premium Intense Fragrance", image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777459478/Zumar_np7l4i.png" },
-        { id: 2, name: "Cara", desc: "Elegant Floral Collection", image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777459478/Cara_re5ecv.png" }
-      ];
+      if (filtered.length === 0) return initialCards;
       return filtered;
     });
   };
+
+  useEffect(() => {
+    const isMobile = window.innerWidth < 768;
+    if (!isMobile) return;
+
+    const interval = setInterval(() => {
+      setCards((prev) => {
+        if (prev.length === 0) return initialCards;
+        const topCardId = prev[0].id;
+        const filtered = prev.filter(c => c.id !== topCardId);
+        return filtered.length === 0 ? initialCards : filtered;
+      });
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="py-12 md:py-32 bg-[#fcfbf7] border-b editorial-border overflow-hidden">
@@ -385,23 +401,23 @@ export const RetailerProductSection = () => {
         </div>
         
         {/* Desktop Grid Layout */}
-        <div className="hidden md:grid md:grid-cols-2 gap-12 lg:gap-20">
+        <div className="hidden md:grid md:grid-cols-3 gap-8 lg:gap-12">
           {cards.map((card) => (
             <motion.div 
               key={card.id}
               whileHover={{ y: -10 }}
-              className="group relative aspect-[4/5] bg-white rounded-[2rem] shadow-2xl border border-zinc-100 overflow-hidden flex flex-col"
+              className="group relative aspect-[3/4] bg-white rounded-2xl shadow-2xl border border-zinc-100 overflow-hidden flex flex-col"
             >
-              <div className="flex-1 p-12 flex items-center justify-center bg-zinc-50/50">
+              <div className="flex-1 overflow-hidden bg-zinc-50/50">
                 <img 
                   src={card.image} 
                   alt={card.name} 
-                  className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
                 />
               </div>
-              <div className="p-8 bg-white border-t border-zinc-50">
-                <h3 className="font-display font-black text-3xl uppercase tracking-tighter text-[#1a1a1a]">{card.name}</h3>
-                <p className="font-mono text-xs text-zinc-400 uppercase tracking-widest mt-1">{card.desc}</p>
+              <div className="p-6 bg-white border-t border-zinc-50">
+                <h3 className="font-display font-black text-2xl uppercase tracking-tighter text-[#1a1a1a]">{card.name}</h3>
+                <p className="font-mono text-[10px] text-zinc-400 uppercase tracking-widest mt-1">{card.desc}</p>
               </div>
             </motion.div>
           ))}
@@ -409,26 +425,35 @@ export const RetailerProductSection = () => {
 
         {/* Mobile Tinder Stack Layout */}
         <div className="md:hidden flex justify-center items-center py-8 relative h-[560px]">
-          {cards.map((card, index) => (
-            <motion.div
-              key={card.id}
-              drag="x"
-              dragConstraints={{ left: 0, right: 0 }}
-              onDragEnd={(_, info) => {
-                if (Math.abs(info.offset.x) > 100) {
-                  removeCard(card.id);
-                }
-              }}
-              style={{
-                zIndex: cards.length - index,
-              }}
-              animate={{
-                scale: 1 - index * 0.05,
-                y: index * 12,
-                opacity: 1 - index * 0.2,
-              }}
-              className="absolute w-[320px] h-[480px] bg-white rounded-[2rem] shadow-[0_30px_60px_rgba(0,0,0,0.2)] overflow-hidden border border-zinc-100 flex flex-col active:cursor-grabbing group cursor-grab"
-            >
+          <AnimatePresence>
+            {cards.map((card, index) => (
+              <motion.div
+                key={card.id}
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                onDragEnd={(_, info) => {
+                  if (Math.abs(info.offset.x) > 100) {
+                    removeCard(card.id);
+                  }
+                }}
+                style={{
+                  zIndex: cards.length - index,
+                }}
+                initial={{ x: 300, opacity: 0 }}
+                animate={{
+                  x: 0,
+                  scale: 1 - index * 0.05,
+                  y: index * 12,
+                  opacity: 1 - index * 0.2,
+                }}
+                exit={{ 
+                  x: -300, 
+                  opacity: 0,
+                  rotate: -15,
+                  transition: { duration: 0.5 }
+                }}
+                className="absolute w-[320px] h-[480px] bg-white rounded-[2rem] shadow-[0_30px_60px_rgba(0,0,0,0.2)] overflow-hidden border border-zinc-100 flex flex-col active:cursor-grabbing group cursor-grab"
+              >
               {/* Full Bleed Image */}
               <div className="absolute inset-0 bg-white">
                 <img 
@@ -462,6 +487,7 @@ export const RetailerProductSection = () => {
               <div className="absolute top-6 right-6 border-4 border-red-500 text-red-500 px-4 py-1 rounded-lg font-black text-2xl uppercase opacity-0 group-drag-left:opacity-100 rotate-12 transition-opacity pointer-events-none">NOPE</div>
             </motion.div>
           ))}
+          </AnimatePresence>
           
           <div className="absolute -bottom-6 text-zinc-300 font-mono text-[9px] uppercase tracking-[0.4em] flex items-center gap-2">
              <span className="animate-pulse">Swipe right to explore</span>
