@@ -551,53 +551,114 @@ export const VideoSection = () => {
 
 export const Footer = () => {
   return (
-    <footer className="pt-12 md:pt-24 pb-8 md:pb-12 bg-white border-t-4 md:border-t-8 border-[#1a1a1a]">
-      <div className="max-w-7xl mx-auto px-4 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-24 mb-12 md:mb-24">
-        <div className="col-span-1 md:col-span-1">
-          <div className="mb-6 md:mb-12">
-            <span className="font-display font-black text-xl md:text-3xl tracking-tighter uppercase text-[#1a1a1a] block leading-none">Shine Raza</span>
-            <span className="text-[8px] md:text-[10px] font-mono font-bold tracking-[0.4em] text-zinc-400 uppercase block mt-1">Fragrance</span>
-          </div>
-          <p className="text-zinc-500 font-medium text-xs md:text-sm leading-relaxed mb-6 md:mb-12">
-            Professional manufacturing solutions for global industrial scents, personal care, and private labeling with a heritage of <span className="text-[#1a1a1a] font-black italic">20 years</span> excellence.
-          </p>
-          <div className="flex gap-3 md:gap-4">
-            <a href="https://www.instagram.com/shinerazafragrances/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 md:w-10 md:h-10 border editorial-border flex items-center justify-center text-zinc-400 hover:bg-brand-red hover:text-white transition-all transform hover:-translate-y-1">
-              <Instagram size={14} className="md:w-4 md:h-4" />
-            </a>
-            <a href="#" className="w-8 h-8 md:w-10 md:h-10 border editorial-border flex items-center justify-center text-zinc-400 hover:bg-brand-red hover:text-white transition-all transform hover:-translate-y-1">
-              <Linkedin size={14} className="md:w-4 md:h-4" />
-            </a>
-            <a href="#" className="w-8 h-8 md:w-10 md:h-10 border editorial-border flex items-center justify-center text-zinc-400 hover:bg-brand-red hover:text-white transition-all transform hover:-translate-y-1">
-              <Facebook size={14} className="md:w-4 md:h-4" />
-            </a>
-          </div>
-        </div>
-
-        <div className="space-y-4 md:space-y-8">
-          <h4 className="text-[8px] md:text-[10px] font-mono font-bold uppercase tracking-[0.4em] text-zinc-300">Operations</h4>
-          <ul className="space-y-2 md:space-y-4 text-[#1a1a1a] font-bold text-[11px] md:text-sm uppercase tracking-tighter">
-            <li className="hover:text-brand-red transition-all cursor-pointer">Quality Hub</li>
-            <li className="hover:text-brand-red transition-all cursor-pointer">Production</li>
-            <li className="hover:text-brand-red transition-all cursor-pointer">Private Label</li>
-            <li className="hover:text-brand-red transition-all cursor-pointer">Global Logistics</li>
-          </ul>
-        </div>
-
-        <div className="space-y-4 md:space-y-8">
-          <h4 className="text-[8px] md:text-[10px] font-mono font-bold uppercase tracking-[0.4em] text-zinc-300">Legal</h4>
-          <ul className="space-y-2 md:space-y-4 text-[#1a1a1a] font-bold text-[11px] md:text-sm uppercase tracking-tighter">
-            <li className="hover:text-brand-red transition-all cursor-pointer">Privacy</li>
-            <li className="hover:text-brand-red transition-all cursor-pointer">Terms</li>
-            <li className="hover:text-brand-red transition-all cursor-pointer">Compliance</li>
-            <li className="text-brand-red font-black border-b border-brand-red inline-block cursor-pointer">Contact</li>
-          </ul>
-        </div>
+    <footer className="pt-16 pb-8 bg-[#fcfbf7] border-t border-zinc-100 relative overflow-hidden">
+      {/* Decorative center background elements */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[url('https://res.cloudinary.com/dejxwe9h0/image/upload/v1777363139/hero-img-1_hze5cj.png')] bg-center bg-cover grayscale" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 md:px-12 pt-8 border-t editorial-border flex flex-col md:flex-row justify-between items-center gap-4 md:gap-8 text-center md:text-left">
-        <p className="text-[7px] md:text-[9px] font-mono font-bold uppercase tracking-[0.3em] md:tracking-[0.5em] text-zinc-400 italic">shinerazafragrance.in — Manufacturing Registry Unit</p>
-        <p className="text-[7px] md:text-[9px] font-mono font-bold uppercase tracking-[0.2em] md:tracking-[0.3em] text-zinc-400">© 2026 Shine Raza. All rights reserved.</p>
+      <div className="max-w-7xl mx-auto px-4 md:px-12 relative z-10">
+        <div className="grid grid-cols-2 md:grid-cols-12 gap-x-4 gap-y-12 md:gap-8 mb-16">
+          
+          {/* Center Info - Top on Mobile, Center on Desktop */}
+          <div className="col-span-2 md:col-span-4 flex flex-col items-center text-center space-y-6 px-4 order-first md:order-3 md:pt-0">
+            <img 
+              src="https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777363138/logo_s65do6.png" 
+              className="h-20 w-auto object-contain" 
+              alt="Logo" 
+            />
+            <p className="text-[13px] text-zinc-600 leading-relaxed max-w-sm font-medium">
+              Established in 2008 by Shine Raza, {BRAND_NAME} has evolved into a leading fragrance house, known for its authentic and pure scents. With nearly two decades of expertise.
+            </p>
+            <div className="flex gap-2 justify-center">
+              {[Facebook, Twitter, Linkedin, Instagram, MessageCircle].map((Icon, idx) => (
+                <a 
+                  key={idx} 
+                  href="#" 
+                  className="w-10 h-10 rounded-full bg-[#cc0000] flex items-center justify-center text-white hover:scale-110 transition-transform shadow-lg active:scale-90"
+                >
+                  <Icon size={18} />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick Links - Side by side on Mobile */}
+          <div className="col-span-1 md:col-span-2 space-y-6 order-2 md:order-1">
+            <h4 className="font-display font-black text-xl text-[#1a1a1a] relative pb-2 inline-block">
+              Quick Links
+              <span className="absolute bottom-0 left-0 w-12 h-1.5 bg-[#cc0000]"></span>
+            </h4>
+            <ul className="space-y-3 font-medium text-sm text-zinc-600">
+              {['Home', 'Our Fragrance', 'Our Journey', 'Discover', 'Blogs', 'Contact us'].map((item) => (
+                <li key={item} className="flex items-center gap-2 group cursor-pointer hover:text-[#cc0000] transition-colors whitespace-nowrap">
+                  <span className="text-[#cc0000] font-bold">»</span> {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Products - Side by side on Mobile */}
+          <div className="col-span-1 md:col-span-2 space-y-6 order-3 md:order-2">
+            <h4 className="font-display font-black text-xl text-[#1a1a1a] relative pb-2 inline-block">
+              Products
+              <span className="absolute bottom-0 left-0 w-12 h-1.5 bg-[#cc0000]"></span>
+            </h4>
+            <ul className="space-y-3 font-medium text-sm text-zinc-600">
+              {[
+                'Fine Fragrance', 
+                'Attar Fragrance', 
+                'Soap Fragrance', 
+                'Fabric Fragrance', 
+                'Air Fragrance', 
+                'Incense Fragrance'
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-2 group cursor-pointer hover:text-[#cc0000] transition-colors whitespace-nowrap">
+                  <span className="text-[#cc0000] font-bold">»</span> {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Info - Bottom on Mobile */}
+          <div className="col-span-2 md:col-span-4 space-y-6 order-4 md:order-4">
+            <h4 className="font-display font-black text-xl text-[#1a1a1a] relative pb-2 inline-block">
+              Contact Info
+              <span className="absolute bottom-0 left-0 w-12 h-1.5 bg-[#cc0000]"></span>
+            </h4>
+            <div className="space-y-6 text-sm text-zinc-600">
+              <div className="flex gap-3">
+                <MapPin className="text-[#cc0000] shrink-0 mt-1" size={18} />
+                <p className="font-medium leading-relaxed">{ADDRESS}</p>
+              </div>
+              <div className="flex flex-col gap-6 pt-4 border-t border-dashed border-zinc-300">
+                <div className="flex items-center gap-3">
+                  <Phone className="text-[#cc0000] shrink-0" size={18} />
+                  <p className="font-bold text-lg text-[#1a1a1a]">+91 {PHONE}</p>
+                </div>
+                
+                {/* Ask Box */}
+                <div className="relative pr-6">
+                  <div className="bg-[#6b6754] p-5 rounded-sm relative shadow-xl border-l-[6px] border-[#cc0000] overflow-hidden group">
+                    <div className="text-white relative z-10 transition-transform group-hover:translate-x-1">
+                      <p className="font-display font-black text-base uppercase tracking-tight mb-0.5">Ask Any Question?</p>
+                      <p className="text-[11px] font-mono opacity-90">{EMAIL}</p>
+                    </div>
+                    {/* Skewed Mail Box */}
+                    <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 lg:translate-x-[20%] w-16 h-16 bg-[#cc0000] flex items-center justify-center transform -skew-x-[15deg] shadow-lg transition-all group-hover:bg-red-700">
+                      <Mail className="text-white transform skew-x-[15deg] mr-2" size={24} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div className="pt-8 border-t border-zinc-200 text-center text-zinc-400 text-[10px] md:text-sm font-bold uppercase tracking-widest">
+          Copyright © 2026 {BRAND_FULL}. All rights reserved.
+        </div>
       </div>
     </footer>
   );
