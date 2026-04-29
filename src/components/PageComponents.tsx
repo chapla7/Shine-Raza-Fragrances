@@ -307,7 +307,7 @@ export const ProductSection = () => {
     { name: "Attar", desc: "Natural perfume oils crafted through traditional methods.", image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777363136/attar_m0twak.jpg" },
     { name: "Cream & Cosmetics", desc: "Skin-friendly aroma ingredients for beauty brands.", image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777363137/cream_eglexi.jpg" },
     { name: "Agarbatti", desc: "Gentle and safe fragrances for sensitive skin.", image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777363136/agarbatti_a4ld4i.jpg" },
-    { name: "Air Fragrances", desc: "Innovative profiles reflecting unique spaces.", image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777363136/air-fragrance_iflegk.jpg" },
+    { name: "Air Fragrances", desc: "Innovative profiles reflecting unique spaces.", image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777457773/air-fragrances_duebpk.png" },
     { name: "Perfumes", desc: "Concentrated luxury perfumes from nature's heart.", image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777364371/perfume_fxgxoa.jpg" },
     { name: "Hair Care", desc: "Signature scents for professional hair care lines.", image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777363139/oil_r9bps9.jpg" },
     { name: "Aromatherapy", desc: "Holistic wellness through therapeutic scents.", image: "https://res.cloudinary.com/dejxwe9h0/image/upload/q_auto/f_auto/v1777363136/aromatherapy_sqm8jn.jpg"}
