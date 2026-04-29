@@ -1,4 +1,4 @@
-import { Navbar, Hero, OurWork, ProductSection, BrandSection, ReviewSection, AboutUs, LocationSection, VideoSection, Footer, WhatsappButton } from './components/PageComponents';
+import { Navbar, Hero, OurWork, ProductSection, RetailerProductSection, BrandSection, ReviewSection, AboutUs, LocationSection, VideoSection, Footer, WhatsappButton } from './components/PageComponents';
 
 export default function App() {
   return (
@@ -9,6 +9,7 @@ export default function App() {
         <Hero />
         <OurWork />
         <ProductSection />
+        <RetailerProductSection />
         <BrandSection />
         <ReviewSection />
         <VideoSection />
